@@ -6,4 +6,4 @@ Soy Lorena Quiceno, aunque mis amigos me dicen Ori, soy una amante de los animal
 
 ## _Contacto Institucional_
 
-[Enlace](lquicenog2@eafit.edu.co)
+lquicenog2@eafit.edu.co
