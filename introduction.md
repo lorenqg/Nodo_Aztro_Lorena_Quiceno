@@ -1,4 +1,4 @@
-**Lorena Quiceno Giraldo**
+# **Lorena Quiceno Giraldo**
 
 ## _¿Quién Soy?_
 
