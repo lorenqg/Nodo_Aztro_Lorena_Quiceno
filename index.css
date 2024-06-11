@@ -1,0 +1,36 @@
+* {
+  font-family: 'Trebuchet MS', sans-serif;
+  background-color: #0f0217;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  list-style: none;
+}
+
+li a {
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover {
+  color: rgb(196, 132, 228);
+}
