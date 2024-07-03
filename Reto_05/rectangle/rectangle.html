@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rectangulo</title>
+    <script src="rectangle.js"></script>
+    <link rel="stylesheet" href="rectangle.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="../../index.html">
+          <img src="../img/logo.png" class="nav__logo" alt="logo" />
+        </a>
+        <ul>
+          <li>
+            <a href="rectangle.html">Rectángulo</a>
+          </li>
+          <li>
+            <a href="../circle/circle.html">Círculo</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container__header">
+        <h1>Rectángulo</h1>
+        <img src="../img/superhero.png" alt="superhero" />
+      </section>
+      <section class="container__body">
+        <h2>Calcula Área, Perímetro y Diagonal</h2>
+        <img src="../img/rectangulo.png" alt="rectangle" />
+        <form>
+          <div class="form-column">
+            <fieldset class="form__entradas">
+              <label for="rectangle_base">Base (cm)</label>
+              <input type="text" id="rectangle_base" />
+              <label for="rectangle_height">Altura (cm)</label>
+              <input type="text" id="rectangle_height" />
+            </fieldset>
+            <fieldset class="form__salida">
+              <legend>Resultados</legend>
+              <label for="retangle_area">Área (cm2)</label>
+              <input type="text" id="retangle_area" disabled />
+              <label for="rectangle_perimeter">Perímetro (cm)</label>
+              <input type="text" id="rectangle_perimeter" disabled />
+              <label for="diagonal">Diagonal (cm)</label>
+              <input type="text" id="diagonal" disabled />
+            </fieldset>
+          </div>
+          <input type="button" value="Calcular" onclick="calcular()" class="button" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

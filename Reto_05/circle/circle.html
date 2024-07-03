@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle</title>
+    <script src="circle.js"></script>
+    <link rel="stylesheet" href="circle.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="../../index.html">
+          <img src="../img/logo.png" class="nav__logo" alt="logo" />
+        </a>
+        <ul>
+          <li>
+            <a href="../rectangle/rectangle.html">Rectángulo</a>
+          </li>
+          <li>
+            <a href="circle.html">Círculo</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Círculo</h1>
+      <section class="section__circle">
+        <img src="../img/circle.png" alt="" />
+        <form class="body__form">
+          <div class="input__group">
+            <label for="radio_circle">Radio</label>
+            <input type="text" id="radio_circle" />
+          </div>
+          <legend>Resultados</legend>
+          <div class="input__group">
+            <label for="area">Área</label>
+            <input type="text" id="area" disabled />
+          </div>
+          <div class="input__group">
+            <label for="perimetro">Perímetro</label>
+            <input type="text" id="perimetro" disabled />
+          </div>
+          <div class="input__group">
+            <label for="diametro">Diámetro</label>
+            <input type="text" id="diametro" disabled />
+          </div>
+          <input type="button" class="button" value="Calcular" onclick="calcular()" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
