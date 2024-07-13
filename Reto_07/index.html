@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="nav-item" data-target="nadador-section">Nadador</li>
+        <li class="nav-item" data-target="terreno-section">Terreno</li>
+        <li class="nav-item" data-target="ladrillos-section">Ladrillos</li>
+        <li class="nav-item" data-target="imc-section">IMC</li>
+        <li class="nav-item" data-target="tienda-section">Tienda</li>
+      </ul>
+    </nav>
+    <main>
+      <section id="nadador-section">
+        <form id="form-nadador">
+          <img id="img-nadador" src="img/nadador.png" alt="ladrillos" />
+          <fieldset>
+            <label for="tiempo1">Tiempo 1 (seg)</label>
+            <input type="number" id="tiempo1" required />
+          </fieldset>
+          <fieldset>
+            <label for="tiempo2">Tiempo 2 (seg)</label>
+            <input type="number" id="tiempo2" required />
+          </fieldset>
+          <fieldset>
+            <label for="tiempo3">Tiempo 3 (seg)</label>
+            <input type="number" id="tiempo3" required />
+          </fieldset>
+          <fieldset>
+            <label for="tiempo4">Tiempo 4 (seg)</label>
+            <input type="number" id="tiempo4" required />
+          </fieldset>
+          <fieldset>
+            <label for="tiempo5">Tiempo 5 (seg)</label>
+            <input type="number" id="tiempo5" required />
+          </fieldset>
+          <fieldset>
+            <label for="promedio">Promedio (seg)</label>
+            <input type="number" id="promedio" disabled />
+          </fieldset>
+          <button class="btn" type="submit">Calcular</button>
+        </form>
+      </section>
+      <section id="terreno-section" class="hidden">
+        <form id="form-terreno">
+          <img id="img-terreno" src="img/terreno.png" alt="terreno">
+          <fieldset>
+            <label for="base-menor">Base Menor (m)</label>
+            <input type="text" id="base-menor" required />
+          </fieldset>
+          <fieldset>
+            <label for="base-mayor">Base Mayor (m)</label>
+            <input type="text" id="base-mayor" required />
+          </fieldset>
+          <fieldset>
+            <label for="lado1">Lado 1 (m)</label>
+            <input type="text" id="lado1" required/>
+          </fieldset>
+          <fieldset>
+            <label for="lado2">Lado 2 (m)</label>
+            <input type="text" id="lado2" required/>
+          </fieldset>
+          <fieldset>
+            <label for="altura">Altura (m)</label>
+            <input type="text" id="altura" required/>
+          </fieldset>
+          <fieldset>
+            <label for="area">Área (m2)</label>
+            <input type="text" id="area" disabled/>
+          </fieldset>
+          <fieldset>
+            <label for="pesticida">Pesticida (litros)</label>
+            <input type="text" id="pesticida" disabled />
+          </fieldset>
+          <fieldset>
+            <label for="cerca-electrica">Cerca Electrica (m)</label>
+            <input type="text" id="cerca-electrica" disabled />
+          </fieldset>
+          <button class="btn" type="submit">Calcular</button>
+        </form>
+      </section>
+      <section id="ladrillos-section" class="hidden">
+        <form id="form-ladrillos">
+          <img id="img_ladrillos" src="img/img_ladrillos.webp" alt="ladrillos" />
+          <fieldset>
+            <label for="alturaPared">Altura Pared</label>
+            <input type="text" id="alturaPared" required />
+          </fieldset>
+          <fieldset>
+            <label for="anchoPared">Ancho Pared</label>
+            <input type="text" id="anchoPared" required />
+          </fieldset>
+          <fieldset>
+            <label for="altoLadrillo">Altura Ladrillo</label>
+            <input type="text" id="altoLadrillo" required/>
+          </fieldset>
+          <fieldset>
+            <label for="anchoLadrillo">Ancho Ladrillo</label>
+            <input type="text" id="anchoLadrillo" required />
+          </fieldset>
+          <fieldset>
+            <label for="cantidad">Cantidad Ladrillos</label>
+            <input type="text" id="cantidad" disabled />
+          </fieldset>
+          <button class="btn" type="submit">Calcular</button>
+        </form>
+      </section>
+      <section id="imc-section" class="hidden">
+        <form id="form-imc">
+          <img id="formula" src="img/formula_imc.jpg" alt="formula imc" />
+          <fieldset>
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" placeholder="60.5" step="0.01" required />
+          </fieldset>
+          <fieldset>
+            <label for="estatura">Estatura (mts)</label>
+            <input type="number" id="estatura" placeholder="1.60" step="0.01" required />
+          </fieldset>
+          <fieldset>
+            <label for="imc">IMC</label>
+            <input type="text" id="imc" disabled />
+          </fieldset>
+          <div id="image_container">
+            <img class="type-imc" id="peso-bajo" src="img/peso_bajo.png" alt="peso_bajo" />
+            <img class="type-imc" id="normal" src="img/normal.png" alt="normal" />
+            <img class="type-imc" id="sobrepeso" src="img/sobrepeso.png" alt="sobrepeso" />
+            <img class="type-imc" id="obesidad" src="img/obesidad.png" alt="obesidad" />
+          </div>
+          <button class="btn" type="submit">Calcular</button>
+        </form>
+      </section>
+      <section id="tienda-section" class="hidden">
+        <form id="form-tienda">
+          <img id="img-tienda" src="img/tienda.webp" alt="tienda">
+          <fieldset>
+            <label for="dias-trabajados">Dias Trabajados</label>
+            <input type="number" id="dias-trabajados" required />
+          </fieldset>
+          <fieldset>
+            <label for="extras-diurnas">Extras Diurnas</label>
+            <input type="number" id="extras-diurnas" required />
+          </fieldset>
+          <fieldset>
+            <label for="extras-nocturnas">Extras Nocturnas</label>
+            <input type="number" id="extras-nocturnas" required />
+          </fieldset>
+          <fieldset>
+            <label for="extras-festivos">Extras Festivos</label>
+            <input type="number" id="extras-festivos" required />
+          </fieldset>
+          <table>
+            <h2>Descontar del sueldo</h2>
+            <tr>
+              <th>Salud</td>
+              <th>Pensión</th>
+              <th>Alimentación</th>
+            </tr>
+            <tr>
+              <td id="salud">$ </td>
+              <td id="pension">$ </td>
+              <td id="alimentacion">$ </td>
+            </tr>
+          </table>
+          <fieldset id="g-liquidacion">
+            <label for="liquidacion">Liquidación</label>
+            <input type="text" id="liquidacion" disabled />
+          </fieldset>
+          <button class="btn" type="submit">Calcular</button>
+        </form>
+      </section>
+      <script src="app.js" />
+    </main>
+  </body>
+</html>

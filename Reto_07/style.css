@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0217;
+}
+
+.hidden {
+  display: none;
+}
+
+nav {
+  height: 10vh;
+  background-color: rgb(207, 147, 234);
+  color: white;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+ul {
+  height: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+
+  & li:hover {
+    color: #0f0217;
+    cursor: pointer;
+  }
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
+  border: none;
+}
+
+input {
+  width: 100%;
+  border-radius: 0.6rem;
+  padding: 0.2rem 0.5rem;
+  border: none;
+  color: white;
+  background-color: #330031;
+  &:disabled {
+    background-color: rgb(96, 95, 95);
+  }
+}
+
+form {
+  margin-top: 2rem;
+  background-color: #d9b9ec;
+  width: 25rem;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+
+  & #formula,
+  #img-terreno {
+    width: 100%;
+  }
+
+  & #img_ladrillos,
+  #img-nadador,
+  #img-tienda {
+    height: 12rem;
+    width: fit-content;
+    align-self: center;
+  }
+}
+
+#form-ladrillos,
+#form-imc {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+#form-nadador,
+#form-terreno,
+#form-tienda {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem 0.5rem;
+
+  & .btn,
+  h2,
+  #img-nadador,
+  #img-terreno,
+  #img-tienda {
+    margin: auto;
+    grid-column: span 2;
+  }
+}
+
+#image_container img {
+  display: none;
+  margin: auto;
+  height: 12rem;
+}
+
+table,
+#g-liquidacion {
+  grid-column: span 2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  & th,
+  td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  & th {
+    background-color: rgb(179, 43, 194);
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.6rem;
+  border: none;
+  color: white;
+  background-color: #330031c9;
+
+  &:hover {
+    background-color: #330031;
+  }
+}
