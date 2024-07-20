@@ -10,7 +10,6 @@ h1 {
 
 nav {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -22,9 +21,10 @@ ul {
   justify-content: space-between;
   padding: 10px;
   list-style: none;
+  flex-wrap: wrap;
 }
 
-li a {
+li {
   padding: 10px;
   font-weight: bold;
   text-decoration: none;
