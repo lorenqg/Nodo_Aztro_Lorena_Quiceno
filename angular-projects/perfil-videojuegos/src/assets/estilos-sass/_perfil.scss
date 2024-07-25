@@ -1,0 +1,229 @@
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: $media-max-width) {
+    flex-direction: column;
+  }
+
+  .perfil,
+  .noticias {
+    @media (max-width: $media-max-width) {
+      width: 100%;
+    }
+  }
+}
+
+.perfil {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 3rem;
+
+  &__avatar {
+    width: 70px;
+    border-radius: 15px;
+
+    @media (max-width: $media-max-width) {
+      border-radius: 100%;
+    }
+  }
+
+  &__name {
+    @include estilos-texto($primario, 16px, $fuente1);
+  }
+
+  &__titulo {
+    @include estilos-texto($secundario, 12px, $fuente1);
+    margin-bottom: 0.5rem;
+  }
+
+  &__button {
+    background-color: $oscuro;
+    border-radius: 20px;
+    padding: 0.5rem 1.8rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: {
+      family: $fuente1;
+      size: 14px;
+      weight: bold;
+      style: normal;
+    }
+  }
+
+  &--estadistica {
+    @include card(0.7rem 0, 1rem 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__ubicacion {
+    @extend .perfil--estadistica;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding-left: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+
+    i {
+      text-align: center;
+      grid-row: 1/3;
+      font-size: 40px;
+      color: $secundario;
+    }
+
+    h2 {
+      @extend .estadistica__elemento--numero;
+      text-transform: uppercase;
+      text-align: left !important;
+    }
+
+    h3 {
+      @extend .perfil__titulo;
+      display: block;
+      font-weight: bold;
+      color: $gris;
+      letter-spacing: 0;
+    }
+  }
+
+  &--galeria {
+    @include card(0.5rem 3rem 1rem 2rem, 0.4rem 0 0 0);
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 5px;
+    align-items: center;
+
+    h2 {
+      @extend .estadistica__elemento--numero;
+      text-transform: uppercase;
+      text-align: left !important;
+      grid-column: 1/5;
+    }
+
+    @media (max-width: $media-max-width) {
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: 10% repeat(4, 21.5%);
+      padding: 20px;
+      gap: 5px;
+
+      h2 {
+        grid-column: 1/4;
+      }
+    }
+  }
+
+  @media (max-width: $media-max-width) {
+    &--estadistica,
+    &__ubicacion,
+    &--galeria {
+      width: 100%;
+    }
+  }
+}
+
+.galeria__foto {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--1 {
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+
+  &--2 {
+    grid-column: 3/5;
+  }
+
+  @media (max-width: $media-max-width) {
+    &--1 {
+      grid-column: 1/4;
+      grid-row: 2/4;
+    }
+
+    &--2 {
+      grid-column: 1/3;
+    }
+
+    &--4 {
+      grid-column: 2/3;
+    }
+  }
+}
+
+.estadistica__elemento {
+  width: 75px;
+
+  &--numero {
+    font-family: $fuente1;
+    text-align: center;
+  }
+
+  span {
+    @extend .perfil__titulo;
+    display: block;
+    font-weight: bold;
+    color: $gris;
+    text-align: center;
+    letter-spacing: 0;
+  }
+}
+
+.perfil__bio {
+  text-align: center;
+  h2 {
+    @extend .perfil__name;
+  }
+  h3 {
+    @extend .perfil__titulo;
+    margin: 0;
+  }
+}
+
+.noticias {
+  width: 40%;
+  padding: 2rem 0;
+  background-color: $oscuro;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-evenly;
+
+  &__article {
+    width: 87%;
+    border-bottom: 3px solid $primario;
+    align-self: flex-end;
+    padding: 0 2rem 2rem 0;
+
+    &--subtitle {
+      @extend .perfil__name;
+      font-size: 14px;
+    }
+
+    &--title {
+      @extend .estadistica__elemento--numero;
+      font-size: 17px;
+      color: white;
+      text-transform: uppercase;
+      text-align: left !important;
+      margin: 2px 0 10px 0;
+    }
+
+    &--text {
+      font-family: $fuente2;
+      color: white;
+    }
+  }
+}
